@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+    body{
+background-image: url("https://images.unsplash.com/photo-1614850715649-1d0106293bd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+background-size: cover;
+
+background-repeat: no-repeat;
+font-family: 'Poppins', sans-serif;
+    }
+    .header{
+    position: absolute;
+    top:2%;
+    font-size:2rem;
+    color:black;
+   right:29%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.achieve{
+    height:30vw;
+    width:50vw;
+    background-size: cover;
+    position: absolute;
+    top:20%;
+    left:25%;
+    border: 5px solid white;
+    border-radius:10%;
+    padding:5px;
+}
+.achieve.active{
+    z-index: 1;
+}
+.next,.prev{
+    color:black;
+    position: absolute;
+    top:33vw;
+    font-size: 3rem;
+    z-index:2;
+    background-color: aliceblue;
+    padding:1%;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+.next{
+    right:15%;
+}
+.prev{
+   left:15%;
+}
+.back{
+    color:black;
+    position: absolute;
+    top: 4%;
+    left:2%;
+    font-size: 3rem;
+    z-index:2;
+    background-color: aliceblue;
+    background-position: center;
+    padding:1%;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+.back a{
+    color: black;
+}
+.next:hover,.prev:hover{
+    cursor: pointer;
+   opacity:0.8;
+   font-size:3.2rem ;
+}
+
+@media(max-width:1200px){
+    body{
+        background-image: none;
+        background-color: orange;
+        overflow-x: hidden;
+        background-position:initial;
+height: auto;
+    }
+    .achieve{
+    height:90vw;
+    width:80vw;
+    top:40vw;
+    left:7vw;
+}
+.header h1{
+    font-size: 7vw;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left:-50vw;
+top: 8vw;
+
+}
+
+.back{
+font-size: 8vw;
+}
+.next,.prev{
+  top:140vw;
+    bottom:auto;
+  
+    
+}
+}
+</style>
+<body>
+    <div class="header">
+        <h1>MY ACHIEVEMENTS</h1></div>
+        <div class="achievebox">
+        <div class="achieve active" style="background-image: url(A1.avif);background-position: center;"></div>
+        <div class="achieve" style="background-image: url(A2.jpg);background-position: center;"></div>
+        <div class="achieve" style="background-image: url(A3.jpg);background-position: center;"></div>
+        <div class="achieve" style="background-image: url(A4.jpg);background-position: center;"></div>
+        <div class="achieve" style="background-image: url(A5.jpg);background-position: center;"></div>
+    </div>
+    <div class="icons">
+        <div class="next"><i class="fa-solid fa-arrow-right-long"></i></div>
+    </div>
+    <div class="prev"><i class="fa-solid fa-arrow-left"></i></div>
+    <div class="back"><a href="index.html"><i class="fa-solid fa-arrow-left"></i></a></div>
+</div>
+<script>
+    // const projects=document.querySelector(".projectimages");
+const project=document.querySelectorAll(".achieve");
+const prevbutn=document.querySelector(".prev"); 
+const nextbutn=document.querySelector(".next");
+let imgindex=0;
+project[imgindex].classList.add('active');
+prevbutn.addEventListener('click', previmg);
+nextbutn.addEventListener('click', nextimg);
+function previmg(){
+project[imgindex].classList.remove('active');
+imgindex=(imgindex==0)?4:imgindex-1;
+project[imgindex].classList.add('active');
+// projects.style.transform= 'translateX(${imgindex*100}%)' ;
+}
+function nextimg(){
+    project[imgindex].classList.remove('active');
+    imgindex=(imgindex==project.length-1)?0:imgindex+1;
+    project[imgindex].classList.add('active');
+    // projects.style.transform= 'translateX(-${imgindex*100}%)' ;
+}
+</script>
+</body>
+</html>

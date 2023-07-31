@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body{
+            background-image: url("https://images.unsplash.com/photo-1614850715649-1d0106293bd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            background-size: cover;
+            height: auto;
+        }
+        
+    .messagearea{
+    display: flex;
+    background-color:  lightyellow;
+    color:black;
+    border-radius:10%;  
+    position: absolute;
+    right:23%;
+    width:auto;
+    height:auto;
+    line-height: 5vw;
+    top: 10vw;
+    border:2px solid black;
+    margin:5%;
+    padding:6%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 2vw;       
+}
+
+h1{
+
+    font-size: 3.5vw;
+    position: absolute;
+    top:5vw;
+    margin-bottom: 5vw;
+    position: absolute;
+right:30%;
+ font-size: 3vw;
+height: auto;
+width:auto;
+border:2px solid black;
+padding: 1%;
+background-color: lightyellow;
+border-radius: 20px;
+
+}
+
+input{
+    font-size: 2vw;
+    text-align: center;
+
+}
+button{
+    width:fit-content;
+    padding:1%;
+    font-size: 1.2vw;
+    background-color: rgb(23, 231, 23);
+    position: absolute;
+    left:40%;
+    top:80%;
+    height: auto;
+    width: auto;
+
+}
+button:hover{
+    opacity:0.8;
+    cursor: pointer;
+}
+.back{
+    font-size: 3rem;
+    border: 5px solid black;
+    border-radius: 50%;
+    background-color: lightyellow;
+    position: absolute;
+    left:5%;
+    width:6vw;
+    height:6vw;
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+i{
+            font-size: 5vw;
+            padding-right: 1.2rem;
+            padding-left: 1rem;
+        }
+.prev a{
+    color:black; 
+}
+.back:hover{
+    cursor: pointer;
+   opacity:0.8;
+}
+@media (max-width:1000px){
+    body{
+        background-image: none;
+    background-color: orange;
+    }
+    
+
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="prev"><a href="index.html"><div class="back"><i class="fa-solid fa-arrow-left"></i></div></a></div>
+        <h1>Give your valuable Feedback</h1>
+    </div>
+    <div class="messagearea">
+        
+        <div class="name"><label for="name">Name:</label>
+        <input type="text" class="namebox" placeholder="Enter your name here" required></div>
+        <div class="mail"><label for="Email">Enter email:</label>
+        <input type="text" class="Emailbox" placeholder="abcd@gmail.com" required></div>
+        <div class="message"><label for="name">Feedback:</label>
+        <input type="text" class="Feedback" placeholder="Enter your Feedback here" required></div>
+<button>Send</button>
+    </div>
+    <script>
+        const sendbtn=documemt.querySelector(button);
+        sendbtn.onclick=function(){
+            alert("Your feedback has been submitted succesfully!");
+        }
+        
+            
+        
+    </script>
+</body>
+</html>

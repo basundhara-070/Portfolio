@@ -1,0 +1,390 @@
+
+*{
+margin:0;
+padding: 0;
+text-decoration: none;
+font-family: 'Barlow Semi Condensed', sans-serif;
+}
+body{
+    width:100%;
+   
+}
+.about h1{
+    color:#fff9a5;
+    position:absolute;
+    left:3%;
+    top:18%;
+    font-size: 7vw;
+    
+}
+.about h2{
+   
+    position: absolute;
+    left:4%;
+    top:11%;
+    font-size:3vw;
+    color:#fff9a5;
+}
+
+.intro h1{
+    font-size: 2vw;
+    display:inline;
+    color:rgb(26, 26, 27);
+}
+.intro h3{
+    display:inline;
+    color:black;
+}
+
+
+.profile{
+display:flex;
+ width:40vw;
+ position: absolute;
+ top:40%;
+ left:5%;
+ z-index: 1;
+}
+.intro{
+    color:rgb(26, 26, 27);
+    position: absolute;
+   width:50%;
+    font-size: 1.6vw;
+    right:0%;
+  
+   } 
+   .image{
+    background-image: url(myimage.png);
+    background-size: cover;
+    width: 15vw;
+    height: 17vw;
+    position: absolute;
+    border: solid black 3px;
+    
+
+}
+ .navigate ul{
+    display: flex;
+    list-style-type: none;
+   justify-content: space space-evenly;
+   position: absolute;
+   left:5%;
+   top:2%;
+   
+ }
+ .navigate ul li a{
+    color: black;
+    font-size:1.5vw;
+    margin: 30px;
+    padding-left: 0.2vw;
+ }
+ li .active{
+    color:orangered;
+ }
+ .navigate ul li a:hover{
+    color:orangered;
+    cursor:pointer;
+   
+ }
+ body{
+    border:2px solid black;
+    background-image: url("https://images.unsplash.com/photo-1614850715649-1d0106293bd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+  overflow-x: hidden;
+  
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+.box1{
+    position:absolute;
+    top:7%;
+    background-color:orange;
+    width:47%;
+    height:80%;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+    left: 3%;
+   
+    bottom: 0%;
+   float:left;
+}
+ .box2{
+    top:7%;
+    background-color:rgb(26, 26, 27);
+    position:absolute;
+    width:47% ;
+    height:80%;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+    right: 3%;
+    bottom: 0%;
+}
+.cv button{
+    color:black;
+   width:180px;
+   height:50px;
+   background-color:#fff9a5 ;
+   font-size: 1.5rem;
+    position: absolute;
+border-radius: 20px;
+ bottom: 1%;
+ left:9%;
+ 
+}
+.cv button:hover{
+    opacity: 0.8;
+    font-size: 1.7rem;
+}
+.projecthead{
+    position: absolute;
+    left:32%;
+    top:3%;
+    font-size:2rem;
+    color:#fff9a5;
+}
+.next,.prev{
+    color:black;
+    position: absolute;
+    bottom: 10%;
+    font-size: 3rem;
+    z-index:2;
+    background-color: aliceblue;
+    padding:1%;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+.next{
+    right:15%;
+}
+.prev{
+   left:15%;
+}
+.project{
+    height:77%;
+    width:80%;
+    background-size: cover;
+    position: absolute;
+    top:13%;
+    left:8%;
+  border: 5px solid white;
+    border-radius: 10%;
+    padding:5px;
+    background-position:center ;
+}
+.project.active{
+    z-index: 1;
+}
+
+.next:hover,.prev:hover{
+    cursor: pointer;
+   opacity:0.8;
+   font-size:3.2rem ;
+}
+@media(max-width:400px){
+    *{
+       margin: 0;
+       padding: 0;
+       
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        background-image: none;
+        border: none;
+    }
+    .box{
+        position:absolute;
+        right: 0;
+        left: 0;
+    }
+    .box1{
+       width:100%;
+       height:90vw;
+       box-sizing: border-box;
+       left:0%;
+       position:absolute;
+       right: 0;
+        left: 0;
+    }
+    .box2{
+    width:100%;
+    height:120vw;
+    top:90vw;
+    position:absolute;
+    right: 0;
+     left: 0;
+    }
+    .project{
+        height:63%;
+        width:80%;
+        background-position:center ;
+    }
+    .next,.prev{
+        color:black;
+        position: absolute;
+        bottom:10px;
+    }
+   
+    .navigate ul li a{
+       
+        font-size:3vw; 
+        margin:6vw;
+     }
+     .navigate ul{
+        display: flex;
+        position: absolute;
+        left:-2%;
+
+     }
+     .image{
+        width: 35vw;
+        height: 40vw;
+        position:absolute;
+        background-position: center;
+        
+    }
+    .profile{
+        top:30vw;
+        left:5px;
+        
+    }
+   
+    .about h1{
+        color:#fff9a5;
+        position:absolute;
+        font-size: 10vw;
+    }
+    .intro{
+        color:rgb(26, 26, 27);
+        position: absolute;
+       width:125%;
+        font-size:4.5vw;
+        right:-130%;
+       } 
+       .intro h1{
+        font-size:5vw;
+       }
+       .cv button{
+       
+       width:30vw;
+       height:8vw;
+      
+       font-size: 4vw;
+        
+   
+     bottom: 6%;
+     left:5%
+     
+    }
+    .projecthead{
+        left:25%;
+    }
+}
+@media(min-width:400px) and (max-width:1500px){
+    *{
+       margin: 0;
+       padding: 0;
+       overflow: -moz-hidden-unscrollable;
+       
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        background-image: none;
+        border: none;
+    }
+    .box{
+        position:absolute;
+        right: 0;
+        left: 0;
+    }
+    .box1{
+       width:100%;
+       height:90vw;
+       box-sizing: border-box;
+       left:0%;
+       position:absolute;
+       right: 0;
+        left: 0;
+    }
+    .box2{
+    width:100%;
+    height:100vw;
+    top:90vw;
+    position:absolute;
+    right: 0;
+     left: 0;
+    }
+    .project{
+        height:63%;
+        width:80%;
+        background-position:center ;
+    }
+    .next,.prev{
+        color:black;
+        position: absolute;
+        bottom:10px;
+    }
+   
+    .navigate ul li a{
+        /* padding-left:4vw; */
+        font-size:3vw; 
+        margin:6vw;
+     }
+     .navigate ul{
+        display: flex;
+        position: absolute;
+        left:-2%;
+
+     }
+     .image{
+        width: 40vw;
+        height: 45vw;
+        position:absolute;
+        background-position: center;
+        
+    }
+    .profile{
+        top:30vw;
+        left:8px;
+        
+    }
+   
+    .about h1{
+        color:#fff9a5;
+        position:absolute;
+        font-size: 10vw;
+    }
+    .intro{
+        color:rgb(26, 26, 27);
+        position: absolute;
+       width:125%;
+        font-size:4.5vw;
+        right:-140%;
+       } 
+       .intro h1{
+        font-size:5vw;
+       }
+       .cv button{
+       
+        width:30vw;
+        height:8vw;
+       
+        font-size: 4vw;
+         
+    
+      bottom: 4%;
+      left:5%
+      
+     }
+       
+}
+
